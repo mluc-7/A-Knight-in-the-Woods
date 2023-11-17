@@ -7,6 +7,7 @@ public class ItemPickUp : MonoBehaviour
 
     public GameObject itemCollectedImage;
     public GameObject  dialogue2;
+    public GameObject getText;
 
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -16,6 +17,7 @@ public class ItemPickUp : MonoBehaviour
                 itemCollectedImage.SetActive(true);
                 TriggerNPCTalk.playerHasItem = true; // Notify the NPC that the player has the item
                 dialogue2.SetActive(true);
+            getText.SetActive(true);
                 
             
         }

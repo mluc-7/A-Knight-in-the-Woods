@@ -4,8 +4,8 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public int attackDamage = 10;
-    public float attackForce = 300f;
+    public float attackDamage = 2f;
+    public float attackForce = 5f;
 
     private bool isAttacking = false;
     public Collider2D rightSwordCollider;
@@ -45,7 +45,7 @@ public class PlayerAttack : MonoBehaviour
             rightSwordCollider.gameObject.SetActive(true);
         }
 
-        yield return new WaitForSeconds(0.1f); // Adjust this value based on your attack animation duration
+        yield return new WaitForSeconds(0.2f); // Adjust this value based on your attack animation duration
 
         // Deal damage to enemies
         DealDamage();
